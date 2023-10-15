@@ -1,5 +1,5 @@
 # Still in development
-## FilmMatcher is an application that allows you to choose films like a dating app and match them with your friends. If both choose the same movie, the application will present It witch will make your late-night movie search much easier and more enjoyable.
+## FilmMatcher is an application that allows you to choose films like a dating app and match them with your friends. If both choose the same movie, the application will present it, which will make your late-night movie search much easier and more enjoyable.
 
-### Domain Model: 
+### Domain Model(version 1. It's not full and will be changed): 
 ![Domain](<FilmMatcher/images/photo_2023-10-15 21.30.46.jpeg>)
