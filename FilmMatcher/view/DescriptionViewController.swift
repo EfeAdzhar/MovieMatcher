@@ -8,20 +8,21 @@
 import UIKit
 
 class DescriptionViewController: UIViewController {
-    @IBOutlet weak var summaryLable: UILabel!
-    @IBOutlet weak var directorLabel: UILabel!
-    @IBOutlet weak var dayLabel: UILabel!
-    @IBOutlet weak var monthLabel: UILabel!
-    @IBOutlet weak var yearLabel: UILabel!
-    @IBOutlet weak var hoursLabel: UILabel!
-    @IBOutlet weak var minutesLabel: UILabel!
+    @IBOutlet  var summaryLable: UILabel!
+    @IBOutlet  var directorLabel: UILabel!
+    @IBOutlet  var dayLabel: UILabel!
+    @IBOutlet  var monthLabel: UILabel!
+    @IBOutlet  var yearLabel: UILabel!
+    @IBOutlet  var hoursLabel: UILabel!
+    @IBOutlet  var minutesLabel: UILabel!
+    weak var viewModel : DescriptionViewModelType?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setValues()
     }
     
-    weak var viewModel : DescriptionViewModelType? {
-        willSet(viewModel) {
+    private func setValues() {
             self.summaryLable.text = viewModel?.summaryText
             self.dayLabel.text = viewModel?.dayText
             self.directorLabel.text = viewModel?.directorsText
@@ -30,7 +31,6 @@ class DescriptionViewController: UIViewController {
             self.hoursLabel.text = viewModel?.hoursText
             self.minutesLabel.text = viewModel?.minutesText
         }
-    }
     
     @IBAction func closeButtonPressed(_ sender: UIButton) {
         dismiss(animated: true)

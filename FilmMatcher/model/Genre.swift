@@ -18,4 +18,6 @@ enum Genre {
     case SCIFi
     case CYBERPUNK
     case ACTION
+    case MAFIA
+    case CRIME
 }

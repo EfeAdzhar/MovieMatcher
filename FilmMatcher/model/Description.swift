@@ -23,5 +23,5 @@ public struct ReleaseDate {
 
 public struct Duration {
     public var hours : Int
-    public var minutes : Float
+    public var minutes : Int
 }

@@ -26,7 +26,11 @@ class MovieListRepository : CrudProtocol {
                   name: "The Matrix",
                   rating: 8.7,
                   description: descriptionRepository.getDescriptionByID(1)!,
-                  genres: [.ACTION, .CYBERPUNK, .SCIFi])
+                  genres: [.ACTION, .CYBERPUNK, .SCIFi]),
+            Movie(id: 2,
+                  name: "The Godfather",
+                  rating:  9.2,
+                  description: descriptionRepository.getDescriptionByID(2)!, genres: [.THRILLER, .MAFIA, .DRAMA])
         ]
     }
     

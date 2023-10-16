@@ -18,18 +18,17 @@ class MovieListViewModel : MovieListTableViewViewModelType {
         return self.moviewListRepository.getAllMovies()
     }
     
+    func numberOfRows() -> Int {
+       return moviewListRepository.getAllMovies().movies.count
+    }
+    
     func descriptionViewModel(forIndexPath indexPath: IndexPath) -> DescriptionViewModelType? {
         let description = getMovies().movies[indexPath.row].description
-        print(description)
         return DescriptionViewModel(description)
     }
     
     func cellViewModel(forIndexPath indexPath: IndexPath) -> MovieListTableViewCellViewModelType? {
         let movies = getMovies().movies[indexPath.row]
         return MovieListCellViewModel(movie: movies)
-    }
-    
-    func numberOfRows() -> Int {
-       return moviewListRepository.getAllMovies().movies.count
     }
 }
