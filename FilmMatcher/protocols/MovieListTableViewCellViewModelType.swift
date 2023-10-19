@@ -6,9 +6,11 @@
 //
 
 import Foundation
+import UIKit
 
 protocol MovieListTableViewCellViewModelType : AnyObject {
     var movieNameLabelText: String { get  }
     var ratingLabelText : String { get }
     var genrasLabelText: String { get }
+    var imageViewImage: String { get }
 }

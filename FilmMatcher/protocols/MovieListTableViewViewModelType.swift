@@ -11,5 +11,6 @@ protocol MovieListTableViewViewModelType {
     func numberOfRows() -> Int
     func getMovies() -> MovieList
     func cellViewModel(forIndexPath indexPath: IndexPath) -> MovieListTableViewCellViewModelType?
-    func descriptionViewModel(forIndexPath indexPath: IndexPath) -> DescriptionViewModelType?
+    func descriptionViewModel() -> DescriptionViewModelType?
+    func selectRow(atIndexPath indexPath: IndexPath)
 }

@@ -13,6 +13,7 @@ struct Movie {
     public var rating : Float
     public var description : Description
     public var genres : [Genre]
+    public var image : String
 }
 
 //extension Movie {

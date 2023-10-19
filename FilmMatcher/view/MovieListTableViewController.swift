@@ -20,7 +20,6 @@ class MovieListTableViewController: UITableViewController {
         super.viewDidLoad()
         self.viewModel = MovieListViewModel()
     }
-    
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -42,16 +41,19 @@ class MovieListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let descriptionViewController =
-        UIStoryboard(name: "Description", bundle: .none)
-            .instantiateViewController(withIdentifier: "DescriptionViewController") as? DescriptionViewController
+        guard let viewModel = viewModel else {return}
+        viewModel.selectRow(atIndexPath: indexPath)
         
-        guard let descriptionVC = descriptionViewController,
-              let viewModel = viewModel else {return}
-        
-        let descriptionViewModel = viewModel.descriptionViewModel(forIndexPath: indexPath)
-        descriptionVC.viewModel = descriptionViewModel
-        present(descriptionVC, animated: true)
+        performSegue(withIdentifier: "descripionSegue", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier, let viewModel = viewModel else {return}
+        if(identifier == "descripionSegue") {
+            if let descriptionVC = segue.destination as? DescriptionViewController {
+                descriptionVC.viewModel = viewModel.descriptionViewModel()
+            }
+        }
     }
     
     /*

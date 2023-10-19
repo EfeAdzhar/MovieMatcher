@@ -9,6 +9,7 @@ import Foundation
 
 class MovieListViewModel : MovieListTableViewViewModelType {
     private var moviewListRepository : MovieListRepository
+    private var selectIndexPath : IndexPath?
 
     init() {
         moviewListRepository = MovieListRepository()
@@ -22,13 +23,19 @@ class MovieListViewModel : MovieListTableViewViewModelType {
        return moviewListRepository.getAllMovies().movies.count
     }
     
-    func descriptionViewModel(forIndexPath indexPath: IndexPath) -> DescriptionViewModelType? {
-        let description = getMovies().movies[indexPath.row].description
-        return DescriptionViewModel(description)
-    }
-    
     func cellViewModel(forIndexPath indexPath: IndexPath) -> MovieListTableViewCellViewModelType? {
         let movies = getMovies().movies[indexPath.row]
         return MovieListCellViewModel(movie: movies)
+    }
+    
+    func descriptionViewModel() -> DescriptionViewModelType? {
+        guard let selectIndexPath = selectIndexPath else {return nil}
+        let description = getMovies().movies[selectIndexPath.row].description
+        return DescriptionViewModel(description)
+    }
+    
+    
+    func selectRow(atIndexPath indexPath: IndexPath) {
+        self.selectIndexPath = indexPath
     }
 }

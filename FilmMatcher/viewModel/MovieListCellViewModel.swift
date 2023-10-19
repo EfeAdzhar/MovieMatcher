@@ -23,4 +23,7 @@ class MovieListCellViewModel : MovieListTableViewCellViewModelType {
     var genrasLabelText: String {
         return GenrasDto.convertGenras(movie.genres)
     }
+    var imageViewImage: String {
+        return movie.image
+    }
 }
