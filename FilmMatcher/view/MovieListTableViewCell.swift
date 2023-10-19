@@ -12,13 +12,21 @@ class MovieListTableViewCell: UITableViewCell {
     @IBOutlet  weak var ratingLabel: UILabel!
     @IBOutlet  weak var genrasLabel: UILabel!
     @IBOutlet weak var movieImage: UIImageView!
-        
+    
     weak var viewModel : MovieListTableViewCellViewModelType? {
         willSet(viewModel) {
-            movieNameLabel.text = viewModel?.movieNameLabelText
-            ratingLabel.text = viewModel?.ratingLabelText
-            genrasLabel.text = viewModel?.genrasLabelText
-            self.imageView?.image = UIImage(named: viewModel!.imageViewImage)
+            viewModel?.movieNameLabelText.bind { [unowned self] text in
+                self.movieNameLabel.text = text
+            }
+            viewModel?.ratingLabelText.bind { [unowned self] text in
+                self.ratingLabel.text = text
+            }
+            viewModel?.genrasLabelText.bind { [unowned self] text in
+                self.genrasLabel.text = text
+            }
+            viewModel?.imageViewImage.bind { [unowned self] text in
+                self.movieImage?.image = UIImage(named: text!)
+            }
         }
     }
 }

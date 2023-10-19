@@ -19,6 +19,8 @@ class MovieListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.viewModel = MovieListViewModel()
+        self.tableView.showsVerticalScrollIndicator = false
+        self.tableView.showsHorizontalScrollIndicator = false
     }
     // MARK: - Table view data source
     

@@ -20,4 +20,6 @@ enum Genre {
     case ACTION
     case MAFIA
     case CRIME
+    case PSYCHOLOGICAL
+    case SUPERNATURAL
 }

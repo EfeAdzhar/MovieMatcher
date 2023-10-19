@@ -16,18 +16,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qKX-6j-ptj">
-                                <rect key="frame" x="139" y="505" width="137" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="59v-xj-bb6">
+                                <rect key="frame" x="20" y="810" width="374" height="31.5"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31.5" id="Mhf-8y-vey"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemBackgroundColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Open App"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Start Matching!">
+                                    <fontDescription key="titleFontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
+                                </buttonConfiguration>
                                 <connections>
-                                    <segue destination="FfG-9a-xLe" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="pIt-EY-MZg"/>
+                                    <segue destination="FfG-9a-xLe" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="mI8-yC-tFZ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Movie Matcher" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yho-LA-uWZ">
+                                <rect key="frame" x="88" y="219" width="238" height="21"/>
+                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="238" id="fVu-7E-XZ0"/>
+                                    <constraint firstAttribute="height" constant="21" id="xMo-HL-5h7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTf-db-WS7">
+                                <rect key="frame" x="62" y="292" width="290" height="214"/>
+                                <string key="text">Movie Matcher is an application that allows you to choose films like a dating app and match them with your friends. If both choose the same movie, the application will present it, which will make your late-night movie search much easier and more enjoyable.</string>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="14"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="59v-xj-bb6" secondAttribute="bottom" constant="20.5" id="0DU-Lz-HQ3"/>
+                            <constraint firstItem="dTf-db-WS7" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="CNb-K5-da0"/>
+                            <constraint firstItem="59v-xj-bb6" firstAttribute="top" secondItem="dTf-db-WS7" secondAttribute="bottom" constant="304" id="EXo-h9-CfF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="59v-xj-bb6" secondAttribute="trailing" constant="20" id="ICT-7U-2l2"/>
+                            <constraint firstItem="dTf-db-WS7" firstAttribute="top" secondItem="yho-LA-uWZ" secondAttribute="bottom" constant="52" id="Nsf-Ji-43s"/>
+                            <constraint firstItem="dTf-db-WS7" firstAttribute="top" secondItem="yho-LA-uWZ" secondAttribute="bottom" constant="52" id="fRw-Ph-ASm"/>
+                            <constraint firstItem="59v-xj-bb6" firstAttribute="top" secondItem="dTf-db-WS7" secondAttribute="bottom" constant="304" id="gqi-1z-RdH"/>
+                            <constraint firstItem="59v-xj-bb6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="guW-xB-c9z"/>
+                            <constraint firstItem="yho-LA-uWZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="88" id="jIG-af-0xX"/>
+                            <constraint firstItem="dTf-db-WS7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="62" id="lwM-Pj-7FT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yho-LA-uWZ" secondAttribute="trailing" constant="88" id="z5f-gp-AUo"/>
+                            <constraint firstItem="yho-LA-uWZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="175" id="zcG-85-vgN"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -46,6 +84,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

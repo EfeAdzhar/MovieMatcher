@@ -8,11 +8,11 @@
 import Foundation
 
 protocol DescriptionViewModelType : AnyObject {
-    var summaryText : String { get }
-    var directorsText : String { get }
-    var dayText : String { get }
-    var monthText : String { get }
-    var yearText : String { get }
-    var hoursText : String { get }
-    var minutesText : String { get }
+    var summaryText: Box<String?> {get}
+    var directorsText: Box<String?> {get}
+    var dayText: Box<String?> {get}
+    var monthText: Box<String?> {get}
+    var yearText: Box<String?> {get}
+    var hoursText: Box<String?> {get}
+    var minutesText: Box<String?> {get}
 }

@@ -9,8 +9,8 @@ import Foundation
 import UIKit
 
 protocol MovieListTableViewCellViewModelType : AnyObject {
-    var movieNameLabelText: String { get  }
-    var ratingLabelText : String { get }
-    var genrasLabelText: String { get }
-    var imageViewImage: String { get }
+    var movieNameLabelText: Box<String?> { get  }
+    var ratingLabelText : Box<String?> { get }
+    var genrasLabelText: Box<String?> { get }
+    var imageViewImage: Box<String?> { get }
 }

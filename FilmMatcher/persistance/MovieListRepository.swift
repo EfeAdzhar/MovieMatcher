@@ -32,8 +32,15 @@ class MovieListRepository : CrudProtocol {
             Movie(id: 2,
                   name: "The Godfather",
                   rating:  9.2,
-                  description: descriptionRepository.getDescriptionByID(2)!, genres: [.THRILLER, .MAFIA, .DRAMA],
-                  image: "The Godfather")
+                  description: descriptionRepository.getDescriptionByID(2)!,
+                  genres: [.THRILLER, .MAFIA, .DRAMA],
+                  image: "The Godfather"),
+            Movie(id: 3,
+                  name: "The Butterfly Effect",
+                  rating: 7.6,
+                  description: descriptionRepository.getDescriptionByID(3)!,
+                  genres: [.PSYCHOLOGICAL, .SUPERNATURAL, .THRILLER, .DRAMA],
+                  image: "The Butterfly Effect")
         ]
     }
     

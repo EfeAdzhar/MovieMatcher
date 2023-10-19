@@ -10,35 +10,22 @@ import Foundation
 class DescriptionViewModel : DescriptionViewModelType {
     private var description : Description
     
-    init(_ desctription : Description) {
-        self.description = desctription
-    }
+    var summaryText: Box<String?> = Box(nil)
+    var directorsText: Box<String?> = Box(nil)
+    var dayText: Box<String?> = Box(nil)
+    var monthText: Box<String?> = Box(nil)
+    var yearText: Box<String?> = Box(nil)
+    var hoursText: Box<String?> = Box(nil)
+    var minutesText: Box<String?> = Box(nil)
     
-    var summaryText: String {
-        return description.summary
-    }
-    
-    var directorsText: String {
-        return description.director
-    }
-    
-    var dayText: String {
-        return String(describing: description.releaseDate.day)
-    }
-    
-    var monthText: String {
-        return String(describing: description.releaseDate.month)
-    }
-    
-    var yearText: String {
-        return String(describing: description.releaseDate.year)
-    }
-    
-    var hoursText: String {
-        return String(describing: description.duration.hours)
-    }
-    
-    var minutesText: String {
-        return String(describing: description.duration.minutes)
+    init(_ description : Description) {
+        self.description = description
+        self.summaryText.value = description.summary
+        self.directorsText.value = description.director
+        self.dayText.value = String(description.releaseDate.day)
+        self.monthText.value = String(description.releaseDate.month)
+        self.yearText.value = String(description.releaseDate.year)
+        self.hoursText.value = String(description.duration.hours)
+        self.minutesText.value = String(description.duration.minutes)
     }
 }

@@ -20,14 +20,41 @@ class DescriptionViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        guard let viewModel = viewModel else {print("nil");return}
-        self.summaryLable.text = viewModel.summaryText
-        self.dayLabel.text = viewModel.dayText
-        self.directorLabel.text = viewModel.directorsText
-        self.monthLabel.text = viewModel.monthText
-        self.yearLabel.text = viewModel.yearText
-        self.hoursLabel.text = viewModel.hoursText
-        self.minutesLabel.text = viewModel.minutesText
+        guard let viewModel = viewModel else {return}
+        viewModel.summaryText.bind { [unowned self] text in
+            self.summaryLable.text = text
+        }
+        
+        viewModel.directorsText.bind { [unowned self] text in
+            self.directorLabel.text = text
+        }
+        
+        viewModel.dayText.bind { [unowned self] text in
+            self.dayLabel.text = text
+        }
+        
+        viewModel.monthText.bind { [unowned self] text in
+            self.monthLabel.text = text
+        }
+        
+        viewModel.yearText.bind { [unowned self] text in
+            self.yearLabel.text = text
+        }
+        
+        viewModel.hoursText.bind { [unowned self] text in
+            self.hoursLabel.text = text
+        }
+        
+        viewModel.minutesText.bind { [unowned self] text in
+            self.minutesLabel.text = text
+        }
+        //        self.summaryLable.text = viewModel.summaryText
+        //        self.dayLabel.text = viewModel.dayText
+        //        self.directorLabel.text = viewModel.directorsText
+        //        self.monthLabel.text = viewModel.monthText
+        //        self.yearLabel.text = viewModel.yearText
+        //        self.hoursLabel.text = viewModel.hoursText
+        //        self.minutesLabel.text = viewModel.minutesText
     }
     
     @IBAction func closeButtonPressed(_ sender: UIButton) {

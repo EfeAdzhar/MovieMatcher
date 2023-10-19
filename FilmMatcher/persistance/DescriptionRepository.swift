@@ -19,7 +19,13 @@ class DescriptionRepository {
                     summary: "The Godfather is a classic film that follows the patriarch of the Corleone crime family, Vito Corleone, as he navigates the world of organized crime while his son Michael becomes increasingly embroiled in the family's violent legacy. The movie explores themes of power, loyalty, and the moral compromises made in pursuit of maintaining control in the criminal underworld.",
                     director: "Francis Ford Coppola",
                     releaseDate: ReleaseDate(day: 14, month: "March", year: 1972),
-                    duration: Duration(hours: 2, minutes: 55))
+                    duration: Duration(hours: 2, minutes: 55)
+                   ),
+        Description(filmId: 3,
+                    summary: "The Butterfly Effect is a psychological thriller that explores the concept of time travel. It follows the life of Evan Treborn, who discovers he can revisit his past and change events. However, as he makes alterations, unintended consequences create a series of disturbing and catastrophic outcomes.",
+                    director: "Eric Bress and J. Mackye Gruber",
+                    releaseDate: ReleaseDate(day: 23, month: "January", year: 2004),
+                    duration: Duration(hours: 1, minutes: 53))
     ]
     
     public func getAllDescriptions() -> [Description] {
