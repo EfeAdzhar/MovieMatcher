@@ -15,7 +15,7 @@ enum Genre {
     case HISTORICCAL
     case DRAMA
     case CARTOON
-    case SCIFi
+    case SCIFI
     case CYBERPUNK
     case ACTION
     case MAFIA
