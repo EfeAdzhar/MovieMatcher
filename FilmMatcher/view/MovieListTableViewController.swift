@@ -51,6 +51,7 @@ class MovieListTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let identifier = segue.identifier, let viewModel = viewModel else {return}
+        
         if(identifier == "descripionSegue") {
             if let descriptionVC = segue.destination as? DescriptionViewController {
                 descriptionVC.viewModel = viewModel.descriptionViewModel()

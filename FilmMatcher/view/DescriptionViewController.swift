@@ -48,13 +48,6 @@ class DescriptionViewController: UIViewController {
         viewModel.minutesText.bind { [unowned self] text in
             self.minutesLabel.text = text
         }
-        //        self.summaryLable.text = viewModel.summaryText
-        //        self.dayLabel.text = viewModel.dayText
-        //        self.directorLabel.text = viewModel.directorsText
-        //        self.monthLabel.text = viewModel.monthText
-        //        self.yearLabel.text = viewModel.yearText
-        //        self.hoursLabel.text = viewModel.hoursText
-        //        self.minutesLabel.text = viewModel.minutesText
     }
     
     @IBAction func closeButtonPressed(_ sender: UIButton) {
