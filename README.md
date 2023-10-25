@@ -6,5 +6,5 @@
 - Language : Swift(for now, will be a backend side using Java)
 - Frameworks : UIKit(for now, more will be used in future)
 
-### Domain Model [version 1. It's not full and will be changed]: 
-![Domain](<FilmMatcher/images/photo_2023-10-15 21.30.46.jpeg>)
+### Domain Model [version 2. Added missed domains. Will be 100% changed]: 
+![Domain](<FilmMatcher/images/domain-model.jpeg>)
